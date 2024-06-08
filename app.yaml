@@ -1,0 +1,25 @@
+runtime: nodejs18
+
+handlers:
+- url: /src/images/(.*\.(png|jpg|svg|gif|ico))
+  static_files: src/images/\1
+  upload: src/images/.*\.(png|jpg|svg|gif|ico)
+
+- url: /src/styles/(.*\.css)
+  static_files: src/styles/\1
+  upload: src/styles/.*\.css
+
+- url: /src/scripts/(.*\.js)
+  static_files: src/scripts/\1
+  upload: src/scripts/.*\.js
+  
+- url: /favicon\.png
+  static_files: favicon.png
+  upload: favicon\.png
+
+- url: /.*
+  static_files: index.html
+  upload: index.html
+
+
+
